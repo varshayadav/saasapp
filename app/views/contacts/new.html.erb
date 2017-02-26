@@ -1,1 +1,14 @@
-<h1>Welcome on new page</h1>
+<div class="container">
+  <h1>Welcome on new page</h1>
+
+  <%= form_for '/contacts' do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+      <%= f.label :comments %>
+      <%= f.text_field :comments, class: 'form-control' %>
+
+      <%= f.submit :Submit, class: 'btn btn-default' %>
+  <% end %>
+</div>
