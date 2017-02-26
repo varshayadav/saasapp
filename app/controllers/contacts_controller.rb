@@ -6,6 +6,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      body = params[:contact][:comment]
+      ContactMailer.contact_email(name, email, body).deliver
+
       flash[:success] = 'Saved successfully'
       redirect_to new_contact_path
     else
