@@ -32,6 +32,9 @@ gem 'jbuilder', '2.5.0'
 # Use twitter bootstrap library for front end ui and layout
 gem 'bootstrap-sass', '3.3.7'
 
+gem 'pry-rails', '~> 0.3.4'
+gem 'rb-readline'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
