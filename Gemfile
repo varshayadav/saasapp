@@ -37,6 +37,12 @@ gem 'rb-readline'
 
 gem 'devise', '4.2.0'
 
+# stripe gem for processing payment
+gem 'stripe', '1.48.0'
+
+# figaro gem for ENV varibles
+gem 'figaro', '1.1.1'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
