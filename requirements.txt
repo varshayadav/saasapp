@@ -1,0 +1,21 @@
+Stripe integration->
+Write js for capturing card details
+send card details tp Stripe server
+Server will return token
+Send user info , token from stripe, and plan to rails server
+rails server i.e our app server will again call to stripe server with user details and token
+Stripe server register user here with token and cuts money here at this stage and returns one token
+
+
+
+steps:
+1. User should have stripe user token in user table
+2. Javascript should prevent form submission when user enter details of card, and send details to stripe server
+   Stripe will retur with card token
+3. Javascript should send user fields and card token to our rails app
+    Rails app should validate user fields
+    Rails app will note whether plan1 or plan2
+4. Once validated rails should send user info (email, id) and card token to stripe server and stripe will create subscription
+    and and send customer token
+  Rails should save customer info and token to db
+
